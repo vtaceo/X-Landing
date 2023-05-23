@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+    font-family: "Public Sans";
 }
 
 body {
@@ -13,18 +16,11 @@ body {
 
 .width {
     max-width: 80vw;
-    /* background-color: orange; */
     margin-left: auto;
     margin-right: auto;
 }
 
 .padding {
-    /* padding-left: 47px;
-    padding-right: 47px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto; */
     padding: 0 5%;
 }
 
@@ -117,6 +113,17 @@ nav .links a:hover::before {
     color: white;
 }
 
+
+nav .links button {
+    background-color: yellow;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 #nav-toggle {
     position: absolute;
     top: -100px;
@@ -148,24 +155,24 @@ nav .icon-burger .line {
     justify-content: flex-end;
     height: 70%;
     margin: auto;
-    /* background-color: rgba(0, 128, 128, 0.253); */
 }
 
 .landing-text .text {
-    background-color: rgba(232, 201, 145, 0.285);
-    width: 80%;
+    width: 70%;
 }
 
 .landing-text h1 {
-    font-size: 48px;
+    font-size: 78px;
+    color: yellow;
 }
 
 .landing-text h3 {
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .landing-text p {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .landing-text .landing-btn {
@@ -173,19 +180,19 @@ nav .icon-burger .line {
 }
 
 .landing-text .landing-btn button {
-    width: 150px;
-    padding: 5px 0;
-    background-color: yellow;
-    border: none;
+    width: 200px;
+    padding: 12px 0;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
     transition: ease 0.3s;
     cursor: pointer;
+    font-weight: 800;
 }
 
 .landing-text .landing-btn button:hover {
-    width: 150px;
-    padding: 5px 0;
-    background-color: rgb(255, 0, 0);
-    border: none;
+    background-color: yellow;
+    color: black;
 }
 
 /* PRICING */
@@ -216,41 +223,51 @@ nav .icon-burger .line {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-flow: wrap;
 }
 
 .card {
     /* background-color: rgb(196, 88, 88); */
     width: 300px;
-    height: auto;
+    height: 400px;
     text-align: center;
     background-color: white;
     color: black;
     border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card .package-name {
-    background-color: yellow;
-    color: black;
+    background-color: red;
+    color: white;
     text-align: center;
     padding: 20px;
     font-weight: bold;
     border-bottom: 1px solid black;
 }
 
+.card .package-name h1 {
+    padding: 0;
+    font-size: 30px;
+}
+
 .card .package-price {
     font-weight: bold;
-    padding: 20px 10px 15px 10px;
     /* background-color: orange; */
 }
 
 .card .package-includes {
-    padding: 10px 0 30px 0;
+    padding: 0px 0 30px 0;
     line-height: 25px;
+    /* background-color: orange; */
 }
 
 .card .package-includes ul {
     list-style: none;
+    font-weight: bold;
 }
 
 .card .btn {
@@ -263,47 +280,205 @@ nav .icon-burger .line {
     background-color: black;
     color: white;
     padding: 15px;
-    width: 100%;
+    width: 60%;
     border: none;
     cursor: pointer;
     transition: ease 0.3s;
+    margin-bottom: 20px;
+    border: 1px solid white;
 }
 
 .card .btn button:hover {
-    background-color: rgb(0, 140, 255);
+    background-color: yellow;
+    color: black;
+    border: 1px solid black;
+}
+
+.footer {
+    height: 10vh;
+    text-align: center;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .socials ul {
+    list-style: none;
+}
+
+.footer .socials ul li a img {
+    width: 28px;
+    padding-bottom: 10px;
 }
 
 
+@media screen and (max-width:1370px) {
+    .landing-text h1 {
+        font-size: 68px;
+        color: yellow;
+    }
+
+    .pricing-hero {
+        width: 100%;
+        height: auto;
+    }
+
+    .pricing-hero h1 {
+        font-size: 48px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .cards-pricing {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 250px;
+        max-height: 350px;
+        border: 1px black solid;
+    }
+
+    .card .btn button {
+        padding: 15px;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .landing-text .text {
+        width: 80%;
+    }
+
+    .pricing-hero h1 {
+        font-size: 48px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .card {
+        width: auto;
+        height: auto;
+    }
+
+    .card .package-name {
+        padding: 20px;
+    }
+
+    .card .package-name h1 {
+        padding: 0;
+        font-size: 30px;
+    }
+
+    .card .package-price {
+        padding: 15px 0 15px 0;
+    }
+
+    .card .package-includes {
+        padding: 0px 10px 20px;
+    }
+
+    .card .btn button {
+        padding: 10px;
+        width: 50%;
+    }
+
+    .cards-pricing {
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .landing-text h1 {
+        font-size: 50px;
+        color: yellow;
+    }
+
+    .pricing {
+        height: auto;
+    }
+
+    .pricing {
+        max-width: 100vw;
+        min-height: auto;
+        margin: auto;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+    }
 
 
+    .pricing-hero {
+        height: auto;
+    }
 
+    .pricing-hero h1 {
+        font-size: 48px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
 
+    .card {
+        min-width: 320px;
+        height: 450px;
+        border: 1px black solid;
+        margin-bottom: 50px;
+    }
 
+    .card .package-name {
+        background-color: red;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid black;
+    }
 
+    .card .package-name h1 {
+        padding: 0;
+        font-size: 30px;
+    }
 
+    .card .package-price {
+        padding: 15px 0 15px 0;
+    }
 
+    .card .package-includes {
+        padding: 0px 10px 20px;
+    }
 
+    .card .btn button {
+        padding: 10px;
+        width: 50%;
+        transition: ease 0.3s;
+    }
 
-
-
-
-
-
-
-
+    .cards-pricing {
+        justify-content: space-around;
+    }
+}
 
 @media screen and (max-width: 768px) {
+    .landing-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 90%;
+        margin: auto;
+    }
 
     nav {
-        position: sticky;
+        position: fixed;
         background-color: rgb(14, 14, 14);
         padding: 0;
     }
 
     .width {
-        min-width: 100vw;
+        max-width: 100vw;
     }
-
 
     nav .logo {
         float: none;
@@ -328,7 +503,7 @@ nav .icon-burger .line {
         height: auto;
         flex-direction: column;
         justify-content: space-evenly;
-        background-color: rgba(0, 0, 0, .8);
+        background-color: rgba(0, 0, 0, 0.911);
         overflow: hidden;
         transition: all .5s ease-in-out;
     }
@@ -357,15 +532,95 @@ nav .icon-burger .line {
         opacity: 0;
     }
 
+
+    .pricing {
+        max-width: 100vw;
+        min-height: 70vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .pricing-hero {
+        width: 100%;
+        height: auto;
+    }
+
+    .pricing-hero h1 {
+        font-size: 48px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .cards-pricing {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-flow: wrap;
+    }
+
+    .card {
+        width: 300px;
+        height: 400px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        border: 1px black solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card .package-name {
+        background-color: red;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid black;
+    }
+
+    .card .package-name h1 {
+        padding: 0;
+        font-size: 30px;
+    }
+
+    .card .package-price {
+        font-weight: bold;
+    }
+
+    .card .package-includes {
+        padding: 0px 0 30px 0;
+        line-height: 25px;
+    }
+
+    .card .package-includes ul {
+        list-style: none;
+        font-weight: bold;
+    }
+
+    .card .btn {
+        width: 100%;
+    }
+
 }
 
-
-
-
-
 @media screen and (max-width: 568px) {
+    .landing-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 90%;
+        margin: auto;
+    }
+
+
+    .landing-text .text {
+        width: 100%;
+    }
+
     .landing-text h1 {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .landing-text h3 {
@@ -375,6 +630,71 @@ nav .icon-burger .line {
     .landing-text p {
         font-size: 16px;
     }
+
+    .pricing-hero h1 {
+        font-size: 48px;
+        text-align: center;
+        padding-bottom: 35px;
+    }
+
+    .pricing-hero h1 {
+        font-size: 34px;
+    }
+
+    .card .package-name h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .landing-btn button {
+        font-size: 16px;
+    }
+
+    .footer {
+        height: 15vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        min-width: 200px;
+    }
+
+    .landing-text .landing-btn button {
+        width: 150px;
+        padding: 8px 0;
+        margin-bottom: 15px;
+    }
+
+    .landing-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 90%;
+        margin: auto;
+    }
+
+    .landing-text .text {
+        width: 95%;
+    }
+
+    .landing-text h1 {
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+
+    .landing-text h3 {
+        font-size: 20px;
+    }
+
+    .landing-text p {
+        font-size: 16px;
+    }
+
 }
 
 
